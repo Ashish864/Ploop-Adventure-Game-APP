@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FAFAFA</color>
+
+    <color name="colorDialogFullscreen">#8AFFFFFF</color>
+
+    <color name="zero">#FAFAFA</color>
+    <color name="one">#F5F5F5</color>
+    <color name="two">#E0E0E0</color>
+    <color name="three">#BDBDBD</color>
+    <color name="four">#9E9E9E</color>
+    <color name="five">#757575</color>
+    <color name="six">#616161</color>
+    <color name="seven">#424242</color>
+    <color name="eight">#212121</color>
+    <color name="nine">#000000</color>
+
+    <color name="red">#B71C1C</color>
+    <color name="orange">#E64A19</color>
+    <color name="green">#1B5E20</color>
+    <color name="blue">#64B5F6</color>
+    <color name="yellow">#FFC107</color>
+
+    <integer-array name="colors">
+        <item>@color/zero</item>
+        <item>@color/one</item>
+        <item>@color/two</item>
+        <item>@color/three</item>
+        <item>@color/four</item>
+        <item>@color/five</item>
+        <item>@color/six</item>
+        <item>@color/seven</item>
+        <item>@color/eight</item>
+        <item>@color/nine</item>
+        <item>@color/red</item>
+        <item>@color/orange</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+        <item>@color/yellow</item>
+    </integer-array>
+
+</resources>

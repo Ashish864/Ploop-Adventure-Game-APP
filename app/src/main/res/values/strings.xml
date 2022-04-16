@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Ploop Adventure</string>
+
+    <string name="action_start">Start</string>
+    <string name="action_resume">Continue</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_checkpoint">Checkpoint</string>
+    <string name="action_yes">Yes</string>
+    <string name="action_no">No</string>
+    <string name="action_house">House</string>
+    <string name="action_door">Door</string>
+    <string name="action_quest">Quest: %1$s</string>
+    <string name="action_quest_accepted">Quest accepted: %1$s</string>
+    <string name="action_ok">OK</string>
+    <string name="action_use_item">Use the %1$s?</string>
+
+    <string name="item_apple">Apple</string>
+    <string name="item_apple_desc">This is an edible item that tends to appear near groups of trees.</string>
+    <string name="item_pumpkin">Pumpkin</string>
+    <string name="item_pumpkin_desc">A mysterious vegetable that grows in sections of thick grass.</string>
+    <string name="item_key">Key</string>
+    <string name="item_key_desc">Keys are very precious items; they are the only way to unlock a save point in the game - without them you could lose your progress!</string>
+    <string name="item_number">x%1$d</string>
+
+    <string name="msg_tutorial">You should probably read some of those signs.</string>
+    <string name="msg_tutorial_move">You can move by swiping left, right, up, or down. Swipe towards an object to interact with it.</string>
+
+    <string name="msg_sign_tutorial1">A single valiant hero, alone in a vast forest.</string>
+    <string name="msg_sign_tutorial2">He remembers none of his past.</string>
+    <string name="msg_sign_tutorial3">In front of him, there is a key.</string>
+
+    <string name="msg_quest_complete">Quest complete!</string>
+
+    <string name="title_char_tutorial1">Part 1: Tutorial</string>
+    <string name="msg_char_tutorial1">
+        What is that thing to the left, you say?
+        Well, I shall tell you a story that has been passed down through generations.
+        It is a house.
+        They are locked by default, but once you acquire a mystical key item, you can gain access to them.
+        Once inside, you have the ability to save the progress of your game using the ominous checkpoint flag and store items such as apples or pumpkins in a magically teleporting chest.</string>
+
+    <string name="msg_save">Would you like to save the game?</string>
+    <string name="msg_enter_house">Enter the house?</string>
+    <string name="msg_door">Go through the door?</string>
+    <string name="msg_locked">The door is locked.</string>
+    <string name="msg_unlock">Do you want to use a key to unlock the door? This action cannot be undone.</string>
+    <string name="msg_picked_up">You picked up a %1$s</string>
+    <string name="msg_picked_up_vowel">You picked up an %1$s</string>
+    <string name="msg_no_space">You don\'t have enough space to hold this item! Please move some of your items into a chest to make room.</string>
+    <string name="msg_quest_incomplete">Please come back when you have finished the quest.</string>
+    <string name="msg_no_quests">It seems you\'ve played all the quests available in the preview. More will be in the official release!</string>
+    <string name="msg_no_scenes">This part of the map hasn\'t been finished yet! Lazy developers…</string>
+    <string name="msg_moved_chest">Moved to chest</string>
+
+    <string name="quest_title_apples">I Really Like Apples</string>
+    <string name="quest_desc_apples">I want to eat a lot of apples. Could you go around and pick up about 10 apples for me?</string>
+    <string name="quest_complete_apples">Thanks for getting me apples! Om nom nom nom nom.</string>
+
+    <string name="quest_title_more_apples">Gimme More Apples</string>
+    <string name="quest_desc_more_apples">Some of my friends could use some apples as well. Could you go and get about 15 for us?</string>
+    <string name="quest_complete_more_apples">These apples are good.</string>
+
+    <string name="quest_title_pumpkins">Pumpkins</string>
+    <string name="quest_desc_pumpkins">I happened to notice this delicious looking patch of pumpkins the other day. Would you mind getting 4 of them for me?</string>
+    <string name="quest_complete_pumpkins">I might make a pie with these…</string>
+
+
+    <string name="title_chest">Chest</string>
+    <string name="title_holding">Holding</string>
+    <string name="title_about">About</string>
+    <string name="title_contrib">Contributors</string>
+    <string name="title_libs">Libraries</string>
+    <string name="title_general">General</string>
+
+    <string name="pref_confirm">%1$s?</string>
+
+    <string name="pref_reset">Reset Progress</string>
+    <string name="pref_desc_reset">Resets the state of the game to when you first started.</string>
+    <string name="pref_confirm_reset">This will delete all the progress you have made in the game. It cannot be undone.</string>
+
+    <string name="pref_dpad">Enable D-pad</string>
+    <string name="pref_desc_dpad">Provides the ability to use a different movement method instead of swiping.</string>
+
+</resources>

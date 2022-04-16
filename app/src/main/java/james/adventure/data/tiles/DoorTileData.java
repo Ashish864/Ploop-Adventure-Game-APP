@@ -1,0 +1,91 @@
+package james.adventure.data.tiles;
+
+import android.content.Context;
+
+import james.adventure.R;
+import james.adventure.data.PositionData;
+import james.adventure.data.items.ItemData;
+import james.adventure.data.items.KeyItemData;
+import james.adventure.utils.ItemUtils;
+import james.adventure.utils.MapUtils;
+import james.adventure.utils.TileUtils;
+
+public class DoorTileData extends TileData {
+
+    private static final String KEY_LOCKED = "locked";
+
+    private PositionData doorPosition;
+    private boolean isLocked;
+    private KeyItemData key;
+
+    public DoorTileData(Context context, PositionData position, int[][] tile) {
+        super(context, tile, position);
+        this.doorPosition = MapUtils.getDoorPosition(position);
+        this.isLocked = getBoolean(KEY_LOCKED, true);
+
+        if (Math.abs(4.5 - position.getTileX()) > Math.abs(4.5 - position.getTileY())) {
+            if (position.getTileX() > 4.5)
+                setTile(TileUtils.rotateTile(tile, 1));
+            else setTile(TileUtils.rotateTile(tile, 3));
+        } else {
+            if (position.getTileY() > 4.5)
+                setTile(TileUtils.rotateTile(tile, 2));
+            else setTile(tile);
+        }
+    }
+
+    private void setLocked() {
+        putBoolean(KEY_LOCKED, false);
+        this.isLocked = false;
+    }
+
+    @Override
+    public void onTouch() {
+        if (isLocked && doorPosition != null) {
+            for (ItemData item : ItemUtils.getHoldingItems(getContext())) {
+                if (item instanceof KeyItemData && item.isUseful()) {
+                    key = (KeyItemData) item;
+                    break;
+                }
+            }
+
+            if (key != null) {
+                getMonochrome().makeItemConfirmationDialog(key, getContext().getString(R.string.msg_unlock),
+                        (dialog, which) -> {
+                            if (key != null) {
+                                dialog.dismiss();
+                                key.setUseless();
+                                setLocked();
+                            }
+                        });
+            } else
+                getMonochrome().makeToast(getContext().getString(R.string.msg_locked));
+        } else {
+            if (doorPosition != null) setMap(doorPosition);
+            else getMonochrome().exitMap(getPosition());
+        }
+    }
+
+    @Override
+    public String getKey(String key) {
+        return doorPosition != null ? doorPosition.getMapKey() : super.getKey(key);
+    }
+
+    @Override
+    public void onEnter() {
+    }
+
+    @Override
+    public void onExit() {
+    }
+
+    @Override
+    public boolean canEnter() {
+        return false;
+    }
+
+    @Override
+    public int getLight() {
+        return 2;
+    }
+}

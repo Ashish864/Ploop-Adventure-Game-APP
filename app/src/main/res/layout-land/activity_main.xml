@@ -1,0 +1,151 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nine">
+
+    <james.adventure.views.BackgroundView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
+
+    <james.adventure.views.SceneryView
+        android:id="@+id/scenery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
+
+    <james.adventure.views.CharacterView
+        android:id="@+id/character"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <james.adventure.views.SquareImageView
+            android:id="@+id/pause"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_pause" />
+
+        <james.adventure.views.SquareImageView
+            android:id="@+id/sound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:tint="@android:color/white"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_sound_on" />
+
+        <james.adventure.views.SquareImageView
+            android:id="@+id/items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_items" />
+
+        <james.adventure.views.SquareImageView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_map" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/scenery"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/up"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_up" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/down"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_down" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/left"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/up"
+            android:layout_toLeftOf="@id/up"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_left" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/right"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/up"
+            android:layout_toRightOf="@id/up"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="center"
+            android:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_right" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:alpha="0"
+        android:background="@android:color/black"
+        android:gravity="center_horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="24dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
